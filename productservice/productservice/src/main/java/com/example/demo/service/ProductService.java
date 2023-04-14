@@ -32,6 +32,7 @@ public class ProductService {
 
     public List<ProductServiceResponse> getAllProducts(){
         List<Product> lst = repo.findAll();
+
         return lst.stream()
                 .map(p -> {
            ProductServiceResponse r = new ProductServiceResponse();
